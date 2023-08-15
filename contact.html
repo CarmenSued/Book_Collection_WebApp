@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet"  type="text/css" href="css/styles.css">
+    
+    <title>Emblem Rare</title>
+</head>
+<body>
+	<div id="pagewrapper">
+    
+	<header > 
+        <a  id="menubutton" href="#navbar">Menu</a> 
+        <nav class="navlinks">
+            <a href="#">Contact Us</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Log in</a>
+       </nav>
+      <div class="logo_container" >
+          <img id="logo" src="H.assets/emblem_logo_128.png" alt="Company logo">    
+          <h1><span id="emblem"> Emblem </span>Rare, Collectible Books </h1>         
+       </div>  
+    </header>
+    <!--ENDCONTENT--> 
+<main class="main_contact">
+    <article class="article_contact">
+       <p><span class="bolder"> Contact us</span></p>
+        <p> Please feel free to contact us if you are looking to buy a book not listed in our collection,
+         or you are looking to sell a book, have a book valued or have a book repaired. We try to answer all 
+         queries within 24 hours of receipt.</p>
+         <a href="#" >sales@emblem-rare-books.com</a>
+        <p><span class="bolder">Phone:</span> 0208 555 6789</p>
+        <!--FORM--> 
+            <form >
+                <fieldset id="details">
+                   <legend>Contact Form</legend>
+                       <label for="name">First name<span class="asterisk">*</span></label>
+                       <input type="text" name="fisrtname" id="name" required>
+           
+                       <label for="surname">Surname<span class="asterisk">*</span></label>
+                       <input type="text" name="lastsurname" id="surname" required>
+               
+                       <label for="email">Email<span class="asterisk">*</span></label>
+                       <input type="text"  name="email"  id ="email" required>
+                 
+                       <label for="interest">Interest<span class="asterisk">*</span></label>
+                       <select id="interest" required>
+                           <option value>-- Please Select --</option >
+                           <option value="20century">20 Century Books</option>
+                           <option value="19century">19 Century Books</option>
+                           <option value="18century">18 Century Books</option>
+                           <option value="rarebooks">Rare Books</option>
+                       </select>
+                </fieldset> 
+                <fieldset id="subfield-a">
+                    <legend>Are you a dealer?</legend>
+                        
+                        <label for="yes">yes</label>
+                        <input type="radio" name="dealer" value="yes" id="yes" checked>
+                       
+                        <label for="no">no</label>
+                        <input type="radio" name="dealer" value="no" id="no" checked>
+                </fieldset>
+                <fieldset id="subfield-b">
+                    <legend>Selling or buying</legend>
+                        <label for="sell">selling</label>
+                        <input type="checkbox" name="sellorbuy" value="sell" id="sell">
+                         
+                        <label for="buy">buying</label>
+                        <input type="checkbox" name="sellorbuy" value="buy" id="buy">
+                </fieldset>
+                <fieldset id="user-comment">
+                    <legend>Text area</legend>
+                        <label for="comment">Comment<span class="asterisk">*</span></label>
+                       <textarea name="comment" id="comment"></textarea>
+                </fieldset>
+                <button id="submit">Submit</button>
+           </form>
+    </article>
+
+</main>
+
+
+     <!--ENDCONTENT--> 
+ <nav class="navbar">  
+    <ul >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a>
+            <ul><!-- the tab index  here only works  when the dropdown menu is open-->
+                <li><a href="#">20th Century</a></li>
+                <li><a href="19century.html">19th Century</a></li>
+                <li><a href="#">18th Century</a></li>
+                <li><a href="#">Rare Books</a></li>
+            </ul>
+        </li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="#">about Us</a></li>
+        <li><a href="#">Books As on Investment</a></li>
+
+    </ul>
+</nav>
+
+<footer>
+    <nav >
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Returns</a></li>
+        </ul>
+</nav>
+    <p id="copyright">Carmen Sedeno,   © 2020.Birkbeck</p>
+</footer>
+</div>		
+
+</body>
+</html>  

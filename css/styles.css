@@ -1,0 +1,524 @@
+@font-face {
+  font-family: "Parisian";
+  src: url("../fonts/parisr.eot") format("embedded-opentype"), url("../fonts/parisr.svg") format("svg"), url("../fonts/parisr.ttf") format("truetype"), url("../fonts/parisr.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*mixin for grids in the home page*/
+/*  https://css-tricks.com/browser-compatibility-css-grid-layouts-simple-sass-mixins/ */
+/* grid for 19 century page*/
+/* grid styles for "Form"*/
+/*16*/
+/*20px*/
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial";
+}
+
+body {
+  background-color: #f3eded;
+}
+
+#pagewrapper {
+  width: 90%;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  font-family: "Parisian";
+  letter-spacing: 0.125rem;
+  color: #b73421;
+}
+
+p, .item1 li {
+  line-height: 1.6;
+}
+
+.bolder {
+  color: black;
+  font-weight: bolder;
+}
+
+header {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  height: 118px;
+  background-color: #f4e1de;
+}
+
+h1 {
+  text-shadow: 1px 1px #611b11;
+  font-family: "Parisian", Arial, sans-serif;
+  color: #e26d5c;
+  font-size: 1.5rem;
+  position: absolute;
+}
+
+#emblem {
+  font-size: 2.5rem;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#logo {
+  max-width: 128px;
+  min-width: 70px;
+  width: 100%;
+  height: auto;
+}
+
+#menubutton {
+  text-decoration: none;
+  text-align: center;
+  font-family: "Parisian";
+  font-weight: bolder;
+  color: #236841;
+  background-color: #edcfcb;
+  visibility: visible;
+  float: right;
+  border: 1px solid #236841;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.navlinks {
+  /*hiperlinks*/
+  visibility: hidden;
+}
+.navlinks a {
+  text-decoration: none;
+  font-family: "Parisian";
+  font-weight: bolder;
+  color: #534d4d;
+  padding: 1rem;
+  margin-right: 1rem;
+  float: right;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+.navbar ul li a {
+  text-decoration: none;
+  display: block;
+  color: #236841;
+  font-family: "Parisian";
+  font-weight: bolder;
+  text-align: center;
+  border: 1px double #b73421;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: #f4e1de;
+}
+
+.navbar ul li > ul {
+  display: none;
+}
+
+.home_main {
+  padding: 1.25rem;
+  margin: 1rem;
+  background-image: url("../H.assets/BookShelves.jpg");
+  /*image from:https://www.freeimages.com*/
+}
+
+.home_aside {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3eded;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.media video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home_aside > div {
+  margin: 1rem;
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #534d4d;
+  background-color: #f8ebea;
+  height: auto;
+}
+
+.home_aside img {
+  float: left;
+  margin: 1rem;
+  width: 100%;
+  height: auto;
+  max-width: 87px;
+}
+
+.aside_text a, .books_page_article a, .article_19 a, .article_contact a {
+  color: #e26d5c;
+}
+.aside_text a p, .books_page_article a p, .article_19 a p, .article_contact a p {
+  text-align: left;
+}
+
+.home_article p:first-of-type:first-letter {
+  color: #236841;
+  font-size: 1.5rem;
+  font-family: "Parisian";
+  font-weight: bolder;
+}
+
+.home_article {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  border-radius: 1px;
+  border: 1px solid #f3eded;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+.home_article a {
+  text-decoration: none;
+  color: #b73421;
+}
+.home_article a p {
+  text-align: left;
+}
+
+.home_article div, .content2 div, .books_19 div {
+  border-width: 5px;
+  border-style: double;
+  border-radius: 5px;
+  background-color: #f8ebea;
+  padding: 1.25rem;
+  margin: 1rem;
+}
+
+/* Here starts mainly the "Books" page style*/
+.books_page_article, .authors, .main_19, .main_delivery, .main_contact {
+  border: 1px solid #b9b3b3;
+  padding: 1.25rem;
+  margin: 1rem;
+  background-color: #f4e1de;
+}
+
+.content1, .content2, .article_19, .section_19, .article_delivery, .table-div, .article_contact {
+  padding: 0.5rem 1.25rem;
+  margin: 1rem;
+  background-color: #f8ebea;
+  border: 1px solid #887e7e;
+}
+
+.content2 {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+}
+.content2 p {
+  text-align: left;
+  font-style: italic;
+  font-family: "Parisian";
+  font-weight: bolder;
+}
+
+.content2 img {
+  width: 100%;
+  height: auto;
+  max-width: 225px;
+}
+
+/* Here starts mainly  the "19century" page style*/
+.catalogue p:nth-of-type(4) {
+  border-bottom: 2px solid #534d4d;
+  padding-bottom: 10px;
+}
+
+.catalogue {
+  overflow: auto;
+}
+.catalogue img {
+  width: 100%;
+  height: auto;
+  max-width: 94px;
+  float: left;
+  margin: 25px;
+}
+.catalogue img p {
+  text-align: left;
+}
+
+/*Here start mainly the delivery page style*/
+table, th, td {
+  border: 1px solid #534d4d;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+th, td:first-child {
+  background-color: #da9a92;
+}
+
+td:first-child {
+  font-weight: bolder;
+  text-align: left;
+}
+
+table {
+  width: auto;
+}
+
+.table-div {
+  /*https://www.w3schools.com/howto/howto_css_table_responsive.asp*/
+  overflow: auto;
+  padding: 10px;
+}
+
+/*Here starts mainly the delivery pages style*/
+/* main source: examples and activities from session 5 AWA*/
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 0.8rem 0.5rem;
+  grid-template-areas: "details" "subfield-a" "subfield-b" "user-comment" "submit";
+  background: #eae8e8;
+  padding: 1rem;
+  border: 3px solid #da9a92;
+  margin-bottom: 2rem;
+}
+form #details {
+  grid-area: details;
+}
+form #subfield-a {
+  grid-area: subfield-a;
+}
+form #subfield-b {
+  grid-area: subfield-b;
+}
+form #user-comment {
+  grid-area: user-comment;
+}
+form #submit {
+  grid-area: submit;
+}
+
+fieldset {
+  border: 2px solid #a09999;
+}
+
+legend {
+  font-style: italic;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  height: 6rem;
+}
+
+button {
+  background: #e26d5c;
+  color: #f3eded;
+  padding: 0.5rem;
+}
+
+input, select {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.asterisk {
+  color: red;
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  width: 10%;
+  transform: scale(1.3);
+}
+
+input:invalid:focus {
+  outline: 2px solid red;
+}
+
+input:valid:focus:not([type=radio]):not([type=checkbox]) {
+  outline: 2px solid green;
+}
+
+/*footer*/
+footer {
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: #f4e1de;
+}
+footer p {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+footer li {
+  display: inline-block;
+  list-style: none;
+  list-style-type: none;
+  padding: 0.5rem;
+}
+footer li a {
+  text-decoration: none;
+  color: #534d4d;
+}
+
+footer ul::before {
+  content: url("../H.assets/emblem_logo_64.png");
+}
+
+/* media queries*/
+@media (min-width: 552px) and (max-width: 797px) {
+  #menubutton {
+    width: 10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navlinks {
+    visibility: visible;
+  }
+  .navlinks a:hover {
+    color: green;
+  }
+
+  #menubutton {
+    display: display;
+  }
+
+  form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 0.8rem 0.5rem;
+    grid-template-areas: "details subfield-a" "details subfield-b" "user-comment user-comment" "submit submit";
+    max-width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .navlinks {
+    visibility: visible;
+  }
+  .navlinks a:hover {
+    color: #308e59;
+  }
+
+  #menubutton {
+    display: none;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 95px;
+    left: 80px;
+  }
+  .navbar li {
+    display: inline-block;
+    margin: 0;
+  }
+  .navbar ul li a {
+    border: none;
+    margin: 0;
+    border-right: 1px solid #da9a92;
+    width: 100px;
+  }
+  .navbar ul {
+    padding: 0 25px;
+  }
+  .navbar li a:hover,
+.navbar a:focus {
+    color: #8c2819;
+    border: 2px solid #e26d5c;
+  }
+  .navbar ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 80%;
+    /* using percentage I could center in differents browsers*/
+    left: 19%;
+  }
+  .navbar ul li > ul li {
+    display: block;
+  }
+
+  .home_aside {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .logo_container {
+    flex-direction: inherit;
+  }
+
+  /*hover are added just for a large screen*/
+  .aside_text a:hover, .books_page_article a:hover, .article_19 a:hover, .article_contact a:hover {
+    color: #236841;
+  }
+
+  /*grid for a larger screen*/
+  .home_article, .content2 {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+  .home_article .item1, .content2 .item1 {
+    grid-column: 1;
+  }
+  .home_article .item2, .content2 .item2 {
+    grid-column: 2;
+  }
+  .home_article .item3, .content2 .item3 {
+    grid-column: 3;
+  }
+
+  .home_books {
+    width: 18%;
+  }
+
+  .book-month {
+    width: 65%;
+  }
+
+  .books_19 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 0.8rem 0.5rem;
+    grid-template-areas: "details subfield-a" "details subfield-b" "user-comment user-comment" "submit submit";
+    max-width: 800px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

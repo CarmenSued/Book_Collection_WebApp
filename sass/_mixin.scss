@@ -1,0 +1,71 @@
+
+@mixin non-bullet-list {
+  list-style: none;
+}
+@mixin style-type-n{
+  list-style-type: none;
+}
+@mixin display-style-inline{
+  display:inline;
+}
+@mixin display-in-block{
+  display:inline-block;
+}
+@mixin display-style-block{
+  display:block
+}
+@mixin no-underline-link {
+  text-decoration: none;
+}
+@mixin default-shadow {
+  text-shadow:  1px 1px darken($brand-color-two,40);
+}
+@mixin scale-images{
+  width: 100%;
+  height: auto;
+}
+
+/*mixin for grids in the home page*/
+@mixin grid-mobile { 
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, auto); 
+}/*  https://css-tricks.com/browser-compatibility-css-grid-layouts-simple-sass-mixins/ */
+
+@mixin grid-desktop {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+   
+}
+/* grid for 19 century page*/
+@mixin grid-century{
+  display:grid;
+        grid-template-columns: auto auto;
+} 
+/* grid styles for "Form"*/
+@mixin grid-form-mobile{
+  display: grid;
+	grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 0.8rem 0.5rem;
+    grid-template-areas: 
+      "details" 
+      "subfield-a"
+      "subfield-b"
+      "user-comment"
+      "submit";
+} 
+@mixin grid-form-L-screen {
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(4, auto);
+   grid-gap: 0.8rem 0.5rem;
+   grid-template-areas: 
+     "details subfield-a"
+     "details subfield-b"
+     "user-comment user-comment"
+     "submit submit";
+}
+
+  

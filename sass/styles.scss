@@ -1,0 +1,465 @@
+@import "_colors";
+@import "_fonts";
+@import "_mixin";
+@import "_layout";
+
+ html,body{
+     margin: $zero-margin;
+     padding: $zero-padding;
+     font-family: $font-f-b;
+ }
+
+body{
+    background-color: $layout-color; 
+}
+
+#pagewrapper{
+    width:90%;
+    margin:auto ;  
+}
+h1,h2,h3{
+    font-family: "Parisian";
+    letter-spacing: $letter-s;
+    color:darken($brand-color-two, 20);
+}
+p, .item1 li{
+    line-height: 1.6;
+}
+.bolder{
+    color:black;
+    font-weight: $font-weight-b;
+}
+header{
+    @include display-style-block;
+    padding:$l-padding;
+    margin:$s-margin;
+    height: 118px;
+    background-color: lighten( $light-color, 20); 
+}
+
+
+h1{ 
+    @include default-shadow;
+    font-family: 'Parisian', Arial, sans-serif;
+    color:$brand-color-two;
+    font-size:$font-size-3;
+    position: absolute;
+  }
+
+#emblem{
+    font-size:$font-size-4;   
+}
+
+.logo_container{
+    display: flex;
+    flex-direction:initial ;
+    align-items: $centered;margin-left: 10px;;
+ 
+} 
+#logo{
+    max-width: 128px;
+    min-width: 70px;
+    width:$max-width;
+    height:auto;
+} 
+#menubutton{
+    @include  no-underline-link;
+    text-align: $centered;
+    font-family: "Parisian";
+    font-weight: $font-weight-b;
+    color:$brand-color;
+    background-color: lighten( $light-color, 15);
+    visibility:visible;
+    float:$right-side;
+    border:$min-px $border-style $brand-color;
+    padding:$s-padding;
+    border-radius:$min-px *4;
+}
+
+
+.navlinks{  /*hiperlinks*/
+    visibility: hidden;
+a { 
+    @include no-underline-link;
+    font-family: $font-f-a;
+    font-weight: $font-weight-b;
+    color:$grey-color;
+    padding: $l-padding;
+    margin-right: $s-margin;
+    float:$right-side;
+    @include no-underline-link;
+ }
+}
+.navbar  ul{
+       @include style-type-n; 
+        padding:$zero-padding;   
+    li a{
+    @include no-underline-link ;
+    @include display-style-block;
+    color:$brand-color;
+    font-family: $font-f-a;
+    font-weight: $font-weight-b;
+    text-align: $centered;
+    border: $min-px $border-style-b darken($brand-color-two, 20);
+    padding:$s-padding;
+    margin:$s-margin;
+    background-color: lighten( $light-color, 20);
+    }
+} 
+.navbar ul li>ul{
+    display:none;    
+}
+
+
+.home_main {
+    padding:$xl-padding;
+    margin:$s-margin;
+    background-image:url("../H.assets/BookShelves.jpg"); /*image from:https://www.freeimages.com*/
+}
+.home_aside{
+    display:flex;
+    flex-direction: column;
+    border:$min-px solid $layout-color; 
+    text-align: $left-side;
+    align-items: $centered;
+    justify-content: $centered;
+    padding: $l-padding;
+}
+.media video{
+    @include display-style-block;
+    width:$max-width;
+    height: auto;
+}
+.home_aside > div{
+ margin:$s-margin;
+ padding:20px;
+ border-radius: $min-px*2;
+ border: $min-px $border-style $grey-color;
+ background-color: lighten( $light-color, 23);
+ height: auto;
+}
+
+.home_aside img{
+    float:$left-side;
+    margin:$s-margin;
+    @include scale-images;
+    max-width: 87px;
+}
+.aside_text, .books_page_article, .article_19, .article_contact{
+     a {
+    color:$brand-color-two;
+        p{
+            text-align: left;
+        }
+    }
+}
+
+.home_article p:first-of-type:first-letter{
+    color:$brand-color;
+    font-size: $font-size-3;
+    font-family: "Parisian";
+    font-weight:$font-weight-b;
+
+}
+
+.home_article {
+    @include grid-mobile;  
+    border-radius: $min-px; 
+    border: $min-px solid $layout-color;
+    padding:$xl-padding;
+    margin-top:$s-margin;
+        a{
+        @include no-underline-link;
+        color:darken($brand-color-two, 20);
+            p {
+                text-align: $left-side;
+            }
+        }
+}
+
+.home_article, .content2, .books_19{
+    div {
+    border-width:$l-px; 
+    border-style:$border-style-b ;
+    border-radius: $l-px;
+    background-color: lighten( $light-color, 23);
+    padding: $xl-padding ;
+    margin:$s-margin;
+}
+}
+/* Here starts mainly the "Books" page style*/
+.books_page_article, .authors, .main_19, .main_delivery, .main_contact {
+    border:$min-px $border-style lighten($grey-color, 40);
+    padding: $xl-padding ;
+    margin:$s-margin;
+    background-color: lighten( $light-color, 20);
+}
+.content1, .content2, .article_19, .section_19, .article_delivery, .table-div, .article_contact{
+    padding: $s-padding $xl-padding;
+    margin: $s-margin;
+    background-color: lighten( $light-color, 23);
+    border:$min-px $border-style lighten($grey-color, 20)
+}
+.content2{
+    @include grid-mobile;
+    justify-content:$centered;
+    p{
+        text-align: $left-side;
+        font-style: $font-italic;
+        font-family:'Parisian' ;
+        font-weight: $font-weight-b;
+    }
+  } 
+.content2 img{
+    @include scale-images;
+    max-width: 225px;
+} 
+/* Here starts mainly  the "19century" page style*/
+
+.catalogue p:nth-of-type(4){
+    border-bottom: $min-px*2 $border-style $grey-color;
+    padding-bottom: $xl-px;
+}
+
+.catalogue {
+    overflow: auto;
+    img{
+         width:$max-width;
+        height: auto;
+        max-width: 94px;
+        float:$left-side;
+        margin:$l-px*5;
+        p{
+            text-align: left;
+        }  
+    }
+}
+/*Here start mainly the delivery page style*/
+table, th, td {
+    border: $min-px $border-style $grey-color;
+    border-collapse: collapse;
+  }
+  th, td{
+    padding: $l-px;
+    text-align: $centered;    
+  }
+  th,td:first-child{
+      background-color: $light-color;
+  }
+   td:first-child{
+       font-weight:$font-weight-b;
+       text-align: $left-side;
+   }   
+  table{
+  width:auto;
+  }
+ 
+.table-div{   /*https://www.w3schools.com/howto/howto_css_table_responsive.asp*/
+     overflow: auto;
+      padding:$xl-px;
+  }
+/*Here starts mainly the delivery pages style*/
+/* main source: examples and activities from session 5 AWA*/
+
+form {
+   @include grid-form-mobile;
+	background: lighten($grey-color, 60);
+    padding: 1rem;
+	border: $min-px*3 $border-style $light-color;
+	margin-bottom: 2rem;
+
+    #details{
+        grid-area: details;
+    }
+    #subfield-a{
+        grid-area: subfield-a;
+    }
+    #subfield-b{
+        grid-area: subfield-b;
+    }
+    #user-comment {
+        grid-area: user-comment;
+    }
+    #submit {
+        grid-area: submit;
+    }
+ }
+fieldset {
+    border: $min-px*2 $border-style  lighten($grey-color, 30);
+}
+legend{
+    font-style: $font-italic;
+    font-weight:$font-weight-b ;
+    padding: $xl-px;
+}
+label {
+	@include display-style-block
+}
+textarea {
+    width: $max-width;
+	height: 6rem;
+}
+button {
+    background: $brand-color-two;
+    color:$layout-color;
+    padding: 0.5rem;
+}
+input, select {
+	width: 90%;
+	padding: 0.5rem;
+	margin: 0.5rem 0;
+}
+.asterisk{
+ color:red;
+}
+
+input[type=checkbox], input[type=radio] {
+	vertical-align: middle;
+	width: 10%;
+	transform: scale(1.3);
+}
+input:invalid:focus{
+    outline: $min-px*2 $border-style red; 
+}
+input:valid:focus:not([type=radio]):not([type=checkbox]){
+    outline: $min-px*2 $border-style green; 
+}
+
+/*footer*/
+footer{
+    padding:$s-padding ;
+    margin:$s-margin;
+    background-color: lighten( $light-color, 20);
+ p{
+    text-align: $right-side;
+    margin-right:$s-margin;
+}
+}
+footer li  {
+    @include display-in-block;
+    @include non-bullet-list;
+    @include style-type-n;
+    padding: $s-padding;
+    a{
+     @include no-underline-link;
+     color:$grey-color;
+    }
+}
+footer ul::before{
+        content:url("../H.assets/emblem_logo_64.png")
+}
+
+/* media queries*/   
+@media( min-width: 552px) and (max-width:797px){
+    #menubutton{
+      width: 10%;
+    }
+}
+@media(min-width:768px) and (max-width: 1024px){
+    .navlinks{
+        visibility:visible;
+        a:hover{
+            color:green;
+        }    
+    }
+    #menubutton{
+        display:display;
+    }
+    form{
+        @include grid-form-L-screen;
+        max-width: 500px;
+    } 
+}
+
+@media(min-width:1024px){
+    .navlinks{
+        visibility: visible;
+        a:hover{
+            color:lighten($brand-color, 10);
+        }
+    }
+    #menubutton{
+        display:none;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 95px;
+        left:80px;
+        li{
+           @include display-in-block ; 
+           margin:0; 
+             
+        }
+        ul li a {   
+            border: none;
+            margin:0;
+            border-right: $min-px $border-style $light-color;
+            width:100px;
+        }
+        ul{
+            padding:0 25px;   
+        }
+         li a:hover, 
+         a:focus {
+         color:darken($brand-color-two, 30);
+         border: $min-px*2 $border-style $brand-color-two;
+         } 
+         ul li:hover>ul{
+        @include display-style-block;
+        position:absolute;
+        top:80%; /* using percentage I could center in differents browsers*/
+        left:19%;
+         }
+        ul li> ul li{
+            @include display-style-block;
+            }
+    }
+
+    .home_aside{
+        flex-direction: row;
+        text-align: $left-side;
+     }
+    .logo_container{
+        flex-direction:inherit;
+    } 
+    /*hover are added just for a large screen*/
+    .aside_text, .books_page_article, .article_19, .article_contact{
+        a:hover{
+        color:$brand-color;
+        }
+    }
+    /*grid for a larger screen*/
+    .home_article, .content2{
+        @include grid-desktop;
+        .item1 {
+            grid-column: 1;
+        }
+        .item2 {
+            grid-column: 2;
+        }
+        .item3 {
+            grid-column: 3;  
+        }
+    }
+    .home_books {
+        width:18%;
+    }
+    .book-month{
+        width:65%;
+    }
+   
+    .books_19{
+        @include grid-century;  
+    }  
+    table{
+        width:$max-width;
+    } 
+    form {
+        @include grid-form-L-screen;
+        max-width: 800px;
+    }
+        
+     
+}
+
